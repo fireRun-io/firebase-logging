@@ -23,7 +23,7 @@ The firebase-logging simulates real-time logging by continually running the Fire
 
 - --help     Help
 - file       Name of the file to write the logs
-- --n        number of lines to get at first run
+- --n        Number of lines to show during first run
 
 ### Run using the github code
 
