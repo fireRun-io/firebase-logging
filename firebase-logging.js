@@ -9,7 +9,7 @@ const argv = require("yargs").argv;
 let last = [];
 let stream;
 const project = argv.project ? `--project ${argv.project}` : "";
-const lines = argv.lines ? argv.lines : 100;
+const lines = argv.lines ? argv.lines : 250;
 
 if (argv.h) {
   console.log(

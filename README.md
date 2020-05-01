@@ -4,6 +4,8 @@ The CLI (command line interface) Firebase tools logging requires you to re-run t
 
 The firebase-logging simulates real-time logging by continually running the Firebase CLI logging command and printing to the console new entires. You can output the logs to the console and a file.
 
+**Note:** the polling occurs every 2 seconds (the max firebase-tools can handle). The default pull is 250 lines, so if you have more than 250 lines logs per seconds, some will be missed. Fix this by increasing the number of log lines pulled with the `--n` parameter.
+
 ## Installation
 
 `npm i -g firebase-logging`
@@ -23,7 +25,7 @@ The firebase-logging simulates real-time logging by continually running the Fire
 
 - --help     Help
 - file       Name of the file to write the logs
-- --n        Number of lines to show during first run
+- --n        Number of log lines to pull
 
 ### Run using the github code
 
