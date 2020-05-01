@@ -1,6 +1,6 @@
 {
   "name": "firebase-logging",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Real-time logging for Firebase",
   "main": "firebase-logging.js",
   "scripts": {
@@ -19,6 +19,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/fireRun-io/firebase-logging/issues"
+  },
+  "bin": {
+    "firebase-logging": "./firebase-logging.js"
   },
   "homepage": "https://github.com/fireRun-io/firebase-logging#readme",
   "dependencies": {

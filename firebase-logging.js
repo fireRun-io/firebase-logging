@@ -1,3 +1,7 @@
+#! /usr/bin/env node
+
+'use strict';
+
 const cmd = require("node-cmd");
 const argv = require("yargs").argv;
 
