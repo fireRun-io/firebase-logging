@@ -12,6 +12,12 @@ The firebase-logging simulates real-time logging by continually running the Fire
 
 ## Usage
 
+### Run with NPM
+
+`npm start -- --project=[Firebase projectId]`
+
+## Run with Node
+
 `node firebase-tools.js --project=[Firebase projectId]`
 
 ### Options

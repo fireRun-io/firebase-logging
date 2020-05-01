@@ -1,0 +1,28 @@
+{
+  "name": "firebase-logging",
+  "version": "1.0.0",
+  "description": "Real-time logging for Firebase",
+  "main": "firebase-logging.js",
+  "scripts": {
+    "start": "node firebase-logging.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fireRun-io/firebase-logging.git"
+  },
+  "keywords": [
+    "Firebase",
+    "Logging"
+  ],
+  "author": "Geoffrey Bourne",
+  "url": "https://www.firerun.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fireRun-io/firebase-logging/issues"
+  },
+  "homepage": "https://github.com/fireRun-io/firebase-logging#readme",
+  "dependencies": {
+    "node-cmd": "^3.0.0",
+    "yargs": "^15.3.1"
+  }
+}
