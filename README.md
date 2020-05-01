@@ -17,7 +17,7 @@ The firebase-logging simulates real-time logging by continually running the Fire
 
 ### Run
 
-`firebase-tools --project=[Firebase projectId]`
+`firebase-logging --project=[Firebase projectId]`
 
 ### Options
 
@@ -26,4 +26,4 @@ The firebase-logging simulates real-time logging by continually running the Fire
 
 ### Run using the github code
 
-`node firebase-tools.js --project=[Firebase projectId]`
+`node firebase-logging.js --project=[Firebase projectId]`
