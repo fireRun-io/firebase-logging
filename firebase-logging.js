@@ -11,7 +11,7 @@ const lines = argv.lines ? argv.lines : 100;
 
 if (argv.h) {
   console.log(
-    "Format: node firebase-logging.js --project=[projectId] --n=[number of lines]"
+    "Usage: firebase-logging --project=[projectId] --n=[number of lines]"
   );
   return;
 }
