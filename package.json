@@ -16,7 +16,7 @@
   ],
   "author": "Geoffrey Bourne",
   "url": "https://www.firerun.io",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/fireRun-io/firebase-logging/issues"
   },
