@@ -2,7 +2,7 @@
 
 The CLI (command line interface) Firebase tools logging requires you to re-run to see new data...yuck!
 
-The firebase-logging simulates real-time logging by continually running the Firebase CLI logging command and printing to the console new entires.
+The firebase-logging simulates real-time logging by continually running the Firebase CLI logging command and printing to the console new entires. You can output the logs to the console and a file.
 
 ## Installation
 
@@ -21,7 +21,8 @@ The firebase-logging simulates real-time logging by continually running the Fire
 
 ### Options
 
-- --help     help
+- --help     Help
+- file       Name of the file to write the logs
 - --n        number of lines to get at first run
 
 ### Run using the github code

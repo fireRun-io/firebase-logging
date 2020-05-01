@@ -1,19 +1,28 @@
 #! /usr/bin/env node
 
-'use strict';
+"use strict";
 
 const cmd = require("node-cmd");
+const fs = require("fs");
 const argv = require("yargs").argv;
 
 let last = [];
+let stream;
 const project = argv.project ? `--project ${argv.project}` : "";
 const lines = argv.lines ? argv.lines : 100;
 
 if (argv.h) {
   console.log(
-    "Usage: firebase-logging --project=[projectId] --n=[number of lines]"
+    "Usage: firebase-logging --project=[projectId] --n=[number of lines] --file=[File to write logs]"
   );
-  return;
+
+  process.exit();
+}
+
+console.log('Starting firebase-logging...');
+
+if (argv.file) {
+  stream = fs.createWriteStream(argv.file, { flags: "a" });
 }
 
 const getLogs = () => {
@@ -28,7 +37,10 @@ const getLogs = () => {
       const diff = splitData.filter((x) => !last.includes(x));
 
       if (diff.length > 0) {
-        console.log(diff.join("\n"));
+        const strLogs = diff.join("\n");
+        console.log(strLogs);
+
+        argv.file && stream.write(strLogs);
       }
 
       last = [...splitData];
@@ -40,3 +52,10 @@ getLogs();
 setInterval(() => {
   getLogs();
 }, 2000);
+
+process.on("SIGINT", () => {
+  console.log("\nStopping firebase-logging");
+
+  argv.file && stream.end();
+  process.exit();
+});
