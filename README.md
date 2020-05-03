@@ -1,10 +1,10 @@
 # firebase-logging
 
-The CLI (command line interface) Firebase tools logging requires you to re-run to see new data...yuck!
+Firebase's CLI (command line interface) [logging](https://firebase.google.com/docs/functions/writing-and-viewing-logs) requires you to re-run to see new data. That becomes a lot of up 'arrow key' and 'enter' pressing.
 
-The firebase-logging simulates real-time logging by continually running the Firebase CLI logging command and printing to the console new entires. You can output the logs to the console and a file.
+**firebase-logging** gives you real-time logging by continually running the Firebase CLI logging command and printing to the console new entires. You can output the logs to the console and a file.
 
-**Note:** the polling occurs every 2 seconds (the max firebase-tools can handle). The default pull is 250 lines, so if you have more than 250 lines logs per seconds, some will be missed. Fix this by increasing the number of log lines pulled with the `--n` parameter.
+**Note:** The polling occurs every 2 seconds (the max firebase-tools can handle). The default pull is 250 lines, so if you have more than 250 lines logs per seconds, some will be missed. Increase the number of log lines pulled with the `--n` parameter to capture more logs.
 
 ## Installation
 
@@ -21,11 +21,18 @@ The firebase-logging simulates real-time logging by continually running the Fire
 
 `firebase-logging --project=[Firebase projectId]`
 
+### Example
+
+Start the logging to the console for project myFirerun, only for the sendReport function, and save to the savelog.txt file.
+
+`firebase-logging --project=myFirerun --function=sendReport --file=savelog.txt`
+
 ### Options
 
-- --help     Help
-- file       Name of the file to write the logs
-- --n        Number of log lines to pull
+- --help       Help
+- --file       Name of the file to write the logs
+- --function   Name of specific function to view logs
+- --n          Number of log lines to pull
 
 ### Run using the github code
 

@@ -9,17 +9,18 @@ const argv = require("yargs").argv;
 let last = [];
 let stream;
 const project = argv.project ? `--project ${argv.project}` : "";
+const only = argv.function ? `--only ${argv.function}` : "";
 const lines = argv.lines ? argv.lines : 250;
 
 if (argv.h) {
   console.log(
-    "Usage: firebase-logging --project=[projectId] --n=[number of lines] --file=[File to write logs]"
+    "Usage: firebase-logging --project=[projectId] --n=[number of lines] --file=[File Name: File to write logs] --function=[Function Name: View specific function logs]"
   );
 
   process.exit();
 }
 
-console.log('Starting firebase-logging...');
+console.log("Starting firebase-logging...");
 
 if (argv.file) {
   stream = fs.createWriteStream(argv.file, { flags: "a" });
@@ -27,7 +28,7 @@ if (argv.file) {
 
 const getLogs = () => {
   cmd.get(
-    `firebase ${project} functions:log -n ${lines}`,
+    `firebase ${project} functions:log -n ${lines} ${only}`,
     (err, data, stderr) => {
       if (err) {
         console.error(err);
