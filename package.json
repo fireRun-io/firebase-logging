@@ -1,6 +1,6 @@
 {
   "name": "firebase-logging",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Real-time logging for Firebase",
   "main": "firebase-logging.js",
   "scripts": {
