@@ -23,9 +23,9 @@ Firebase's CLI (command line interface) [logging](https://firebase.google.com/do
 
 ### Example
 
-Start the logging to the console for project myFirerun, only for the sendReport function, and save to the savelog.txt file.
+Start the logging to the console for project myFirerun, only for the sendReport function, save to the savelog.txt file, and format the time to local.
 
-`firebase-logging --project=myFirerun --func=sendReport --file=savelog.txt`
+`firebase-logging --project=myFirerun --func=sendReport --file=savelog.txt --ft`
 
 ### Options
 
@@ -33,9 +33,10 @@ Start the logging to the console for project myFirerun, only for the sendReport 
 | ------------- |:-----------------------------------------:|
 | --help        | Help info                                 |
 | --file        | Name of the file to write the logs        |
-| --color       | Set to `off` to turn off coloring of logs |
+| --colorOff    | Turn off coloring of logs                 |
 | --func        | Name of specific function to view logs    |
 | --n           | Number of log lines to pull (1-1000)      |
+| --ft          | Format time to local date and time        |
 
 ### Run using the github code
 
