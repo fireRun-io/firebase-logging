@@ -6,8 +6,8 @@ Firebase's CLI (command line interface) [logging](https://firebase.google.com/do
 
 Log enhancements include:
 
-- Colored Logs: *timestamp* blue, *function* name green, *warning* yellow, and *error* red.
-- Locally Formatted Timestamp: format from UTC timestamp to your local time.
+- Colored Logs: *timestamp* blue, *function* name green, *warning* yellow, and *error* red. Default.
+- Locally Formatted Timestamp: format from UTC timestamp to your local time. Use `--ft` parameter to format.
 
 **Note:** The polling occurs every *2 seconds*, which is the maximum firebase-tools can handle. The default pull is 250 lines, so if you have more than 250 lines logs per seconds, some will be missed. Increase the number of log lines pulled with the `--n` parameter to capture more logs (1-1000).
 
