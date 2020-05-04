@@ -31,5 +31,4 @@ const formatDate = (str) => {
   return formattedStr;
 };
 
-exports.isValidDate = isValidDate;
 exports.formatDate = formatDate;
