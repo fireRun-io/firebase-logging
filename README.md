@@ -46,7 +46,7 @@ Start the logging to the console for project myFirerun, only for the sendReport 
 
 `firebase-logging --project=myFirerun --func=sendReport --file=savelog.txt --ft`
 
-### Options
+### Parameters
 
 #### Required
 
@@ -58,7 +58,7 @@ Start the logging to the console for project myFirerun, only for the sendReport 
 
 | Parameter     | Description                                       |
 | ------------- |:-------------------------------------------------:|
-| --help        | Help info                                         |
+| --h           | Help info                                         |
 | --file        | [File Name] to write the logs                     |
 | --colorOff    | Turn off coloring of logs                         |
 | --func        | [Function Name] of specific function to view logs |

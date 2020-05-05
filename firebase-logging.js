@@ -6,18 +6,19 @@ const argv = require("yargs").argv;
 const { formatDate } = require("./utils/date");
 const { colorMe } = require("./utils/color");
 
-const SCHEDULE = 2000; // milliseconds
+const SCHEDULE = 2000;        // milliseconds
+const DEFAULT_LINES = 250;    // lines to poll
 
 let last = [];
 let stream;
 const project = argv.project ? `--project ${argv.project}` : "";
 const only = argv.function ? `--only ${argv.func}` : "";
-const lines = argv.n ? argv.n : 250;
+const lines = argv.n ? argv.n : DEFAULT_LINES;
 const freq = !isNaN(argv.freq) ? parseInt(argv.freq) : SCHEDULE;
 
 if (argv.h || argv.help) {
   console.log(
-    "Usage: firebase-logging\n--project=[projectId] - Required: Firebase Project Id\n--n=[number] - Optional: Number of log line to poll, default 250\n--file=[File Name] - Optional: File to write logs\n--func=[Function Name] - Optional: View specific function logs\n--colorOff - Optional: Turn off coloring of logs\n--ft\n--freq=[milliseconds] - Optional: polling frequency, default 2000"
+    "Usage: firebase-logging\n\nRequired:\n--project=[projectId] : Firebase Project Id\n\nOptional:\n--n=[number] : Number of log line to poll, default 250\n--file=[File Name] : File to write logs\n--func=[Function Name] : View specific function logs\n--colorOff : Turn off coloring of logs\n--ft : Format timestamp to local\n--freq=[milliseconds] : polling frequency, default 2000"
   );
 
   process.exit();

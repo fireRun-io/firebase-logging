@@ -1,6 +1,6 @@
 {
   "name": "firebase-logging",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Real-time logging for Firebase",
   "main": "firebase-logging.js",
   "scripts": {
@@ -11,11 +11,13 @@
     "url": "git+https://github.com/fireRun-io/firebase-logging.git"
   },
   "keywords": [
-    "Firebase",
     "firebase",
     "realtime",
     "logs",
-    "Logging"
+    "logging",
+    "functions",
+    "google",
+    "cloud"
   ],
   "author": "Geoffrey Bourne",
   "url": "https://www.anothermadworld.com",
