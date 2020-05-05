@@ -6,7 +6,7 @@
 
 Firebase Logging is a free open source tool that we built for the Firebase community. We are regular user of Firebase and this solves a real "logging" need for us. We hope it helps you too.
 
-See the [Firebase Logging Page](https://firerun.io/firebase-logging/) for more information.
+See our [Firebase Logging Page](https://firerun.io/firebase-logging/) for more information.
 
 ## Why Firebase Logging
 
