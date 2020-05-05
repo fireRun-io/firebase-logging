@@ -6,7 +6,7 @@
 
 Firebase Logging is a free open source tool that we built for the Firebase community. We are regular user of Firebase and this solves a real "logging" need for us. We hope it helps you too.
 
-See the [Firebase Logging Homepage](https://firerun.io/firebase-logging/) for more information.
+See the [Firebase Logging Page](https://firerun.io/firebase-logging/) for more information.
 
 ## Why Firebase Logging
 
@@ -47,6 +47,14 @@ Start the logging to the console for project myFirerun, only for the sendReport 
 `firebase-logging --project=myFirerun --func=sendReport --file=savelog.txt --ft`
 
 ### Options
+
+#### Required
+
+| Parameter     | Description                                       |
+| ------------- |:-------------------------------------------------:|
+| --project     | [projectId] of Firebase project                   |
+
+#### Optional
 
 | Parameter     | Description                                       |
 | ------------- |:-------------------------------------------------:|
