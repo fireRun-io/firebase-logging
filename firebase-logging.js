@@ -6,21 +6,29 @@ const argv = require("yargs").argv;
 const { formatDate } = require("./utils/date");
 const { colorMe } = require("./utils/color");
 
+const SCHEDULE = 2000;    // milliseconds
+
 let last = [];
 let stream;
 const project = argv.project ? `--project ${argv.project}` : "";
 const only = argv.function ? `--only ${argv.func}` : "";
 const lines = argv.n ? argv.n : 250;
+const freq = !isNaN(argv.freq) ? parseInt(argv.freq) : SCHEDULE;
 
 if (argv.h) {
   console.log(
-    "Usage: firebase-logging --project=[projectId] --n=[number of lines] --file=[File Name: File to write logs] --func=[Function Name: View specific function logs] --colorOff --ft"
+    "Usage: firebase-logging\n--project=[projectId]\n--n=[number of lines]\n--file=[File Name: File to write logs]\n--func=[Function Name: View specific function logs]\n--colorOff\n--ft\n--freq=[polling frequency in milliseconds]"
   );
 
   process.exit();
 }
 
-console.log("Starting firebase-logging...");
+if(freq < 1500) {
+  console.error('Minimum frequency is 1500 milliseconds.');
+  process.exit();
+} else {
+  console.log(`Starting firebase-logging, query every ${freq} milliseconds ...`);
+}
 
 if (argv.file) {
   stream = fs.createWriteStream(argv.file, { flags: "a" });
@@ -70,7 +78,7 @@ const getLogs = () => {
 getLogs();
 setInterval(() => {
   getLogs();
-}, 2000);
+}, freq);
 
 process.on("SIGINT", () => {
   console.log("\nStopping firebase-logging");

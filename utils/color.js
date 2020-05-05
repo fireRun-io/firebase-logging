@@ -2,7 +2,12 @@ const chalk = require("chalk");
 
 const colorMe = (logArr) => {
   logArr[0] = chalk.blue(logArr[0]);
-  logArr[1] = logArr[1] === "E" ? chalk.red.bold(logArr[1]) : logArr[1];
+  logArr[1] =
+    logArr[1] === "E"
+      ? chalk.red.bold(logArr[1])
+      : logArr[1] === "W"
+      ? chalk.yellow.bold(logArr[1])
+      : logArr[1];
   logArr[2] = chalk.green(logArr[2]);
 
   const coloredLogs = logArr.map((y) => {

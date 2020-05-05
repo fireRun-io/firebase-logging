@@ -1,6 +1,6 @@
 {
   "name": "firebase-logging",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Real-time logging for Firebase",
   "main": "firebase-logging.js",
   "scripts": {
@@ -26,7 +26,7 @@
   "bin": {
     "firebase-logging": "./firebase-logging.js"
   },
-  "homepage": "https://www.firerun.io",
+  "homepage": "https://firerun.io/firebase-logging",
   "dependencies": {
     "chalk": "^4.0.0",
     "node-cmd": "^3.0.0",
