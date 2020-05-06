@@ -4,7 +4,7 @@
 
 # Easier Logging for Firebase
 
-Firebase Logging is a free open source tool that we built for the Firebase community. We are regular user of Firebase and this solves a real "logging" need for us. We hope it helps you too.
+Firebase Logging is a free open source tool that we built for the Firebase community. We are regular users of Firebase and this solves a real "logging" need for us. We hope it helps you too.
 
 See our [Firebase Logging Page](https://firerun.io/firebase-logging/) for more information.
 
@@ -12,7 +12,7 @@ See our [Firebase Logging Page](https://firerun.io/firebase-logging/) for more i
 
 Firebase's CLI (command line interface) [logging](https://firebase.google.com/docs/functions/writing-and-viewing-logs) requires you to re-run the tool just to see new data. That becomes a lot of up 'arrow key' and 'enter' pressing.
 
-**Firebase Logging** gives you real-time logging by continually running the Firebase CLI logging command and printing to the console new entires. You can output the logs to the console and a file.
+**Firebase Logging** gives you mostly real-time logging by continually running the Firebase CLI logging command and printing to the console new entires. You can output the logs to the console and a file.
 
 Log enhancements include:
 
