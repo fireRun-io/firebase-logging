@@ -11,7 +11,7 @@ const DEFAULT_LINES = 250;    // lines to poll
 
 let last = [];
 let stream;
-const project = argv.project ? `--project ${argv.project}` : "";
+const project = argv.project ? `--project ${argv.project}` : null;
 const only = argv.function ? `--only ${argv.func}` : "";
 const lines = argv.n ? argv.n : DEFAULT_LINES;
 const freq = !isNaN(argv.freq) ? parseInt(argv.freq) : SCHEDULE;
@@ -24,12 +24,16 @@ if (argv.h || argv.help) {
   process.exit();
 }
 
-if (freq < 1500) {
+if(!project) {
+  console.error("You need to provide a Firebase project with the '--project=[projectId]' parameter.");
+  process.exit();
+}
+else if (freq < 1500) {
   console.error("Minimum frequency is 1500 milliseconds.");
   process.exit();
 } else {
   console.log(
-    `Starting firebase-logging, query every ${freq} milliseconds ...`
+    `Starting firebase-logging, polling every ${freq} milliseconds ...`
   );
 }
 
