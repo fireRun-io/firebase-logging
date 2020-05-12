@@ -10,12 +10,16 @@ const colorMe = (logArr) => {
       : logArr[1];
   logArr[2] = chalk.green(logArr[2]);
 
+  console.log(JSON.stringify(logArr, null, 2));
+
   const coloredLogs = logArr.map((y) => {
-    const lower = y.toLowerCase();
-    if (lower.includes("error")) {
-      y = chalk.red.bold(y);
-    } else if (lower.includes("warning")) {
-      y = chalk.yellow.bold(y);
+    if (y) {
+      const lower = y.toLowerCase();
+      if (lower.includes("error")) {
+        y = chalk.red.bold(y);
+      } else if (lower.includes("warning")) {
+        y = chalk.yellow.bold(y);
+      }
     }
 
     return y;
